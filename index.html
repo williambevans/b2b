@@ -26,30 +26,35 @@
         li {
             margin-bottom: 10px;
         }
-    </style>
-
-<script>
-
-async function geotagVisitor() {
-    try {
-        const response = await fetch('https://ipapi.co/json/');
-        if (!response.ok) {
-            throw new Error('Failed to fetch geolocation data');
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
         }
-        const data = await response.json();
-        alert(`Visitor IP Address: ${data.ip}\nVisitor ZIP Code: ${data.postal}`);
-    } catch (error) {
-        console.error('Error fetching geolocation data:', error);
-        alert('Error fetching geolocation data. Please try again later.');
-    }
-}
+    </style>
+    <script>
+        // JavaScript to log LinkedIn profile link
+        console.log("https://www.linkedin.com/in/william-h-bevans-jr-029500217?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app");
 
-geotagVisitor();
+        // Function to geotag visitor and show IP address and ZIP code in a pop-up
+        async function geotagVisitor() {
+            try {
+                const response = await fetch('https://ipapi.co/json/');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch geolocation data');
+                }
+                const data = await response.json();
+                alert(`Visitor IP Address: ${data.ip}\nVisitor ZIP Code: ${data.postal}`);
+            } catch (error) {
+                console.error('Error fetching geolocation data:', error);
+                alert('Error fetching geolocation data. Please try again later.');
+            }
+        }
 
-<script/>
-
-
-
+        // Execute geotagging function
+        geotagVisitor();
+    </script>
 </head>
 <body>
     <h1>Comprehensive 2025 Sprint Plan with Daily Breakdown</h1>
